@@ -1,0 +1,11 @@
+###### BINARIES ######
+
+# hwcomposer
+system/lib/hw/hwcomposer.santos10wifi.so
+
+# GPS
+system/bin/gpsd
+system/lib/hw/gps.default.so
+
+# Camera
+system/lib/hw/camera.santos10wifi.so
