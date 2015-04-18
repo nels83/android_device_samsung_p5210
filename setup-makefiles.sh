@@ -78,7 +78,8 @@ for FILE in `cat proprietary-$DEVICE-files.txt | grep -v ^# | grep -v ^$`; do
     if [ $COUNT = "0" ]; then
         LINEEND=""
     fi
-    echo "    $OUTDIR/$DEVICE/$FILE:$FILE$LINEEND" >> $DEVICEMAKEFILE
+    FILEOUT=`echo $FILE | sed 's/camera\./camera\.vendor\./'`
+    echo "    $OUTDIR/$DEVICE/$FILE:$FILEOUT$LINEEND" >> $DEVICEMAKEFILE
 done
 
 (cat << EOF) | sed s/__COMMON__/$COMMON/g | sed s/__DEVICE__/$DEVICE/g | sed s/__VENDOR__/$VENDOR/g > ../../../vendor/$VENDOR/$COMMON/$DEVICE-vendor.mk
