@@ -17,20 +17,20 @@
 $(call inherit-product, device/samsung/p5200/p52xx-common.mk)
 
 LOCAL_PATH := device/samsung/p5210
+COMMON_PATH := device/samsung/p5200
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.santos10.usb.rc:root/init.santos10wifi.usb.rc \
-    $(LOCAL_PATH)/rootdir/init.santos10.rc:root/init.santos10wifi.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.santos10.rc:root/ueventd.santos10wifi.rc \
-    $(LOCAL_PATH)/rootdir/fstab.santos10:root/fstab.santos10wifi
+    $(COMMON_PATH)/rootdir/init.santos10.usb.rc:root/init.santos10wifi.usb.rc \
+    $(COMMON_PATH)/rootdir/init.santos10.rc:root/init.santos10wifi.rc \
+    $(COMMON_PATH)/rootdir/ueventd.santos10.rc:root/ueventd.santos10wifi.rc \
+    $(COMMON_PATH)/rootdir/fstab.santos10:root/fstab.santos10wifi
 
 # Audio
-##PRODUCT_COPY_FILES += \
-##    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/espresso10wifi \
-##    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/tiny_hw.xml:system/etc/sound/santos10wifi
 
 # Use the non-open-source parts
 $(call inherit-product, vendor/samsung/p52xx/p5210-vendor.mk)
