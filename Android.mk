@@ -26,7 +26,7 @@ ifeq ($(TARGET_DEVICE),p5210)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-COMMON_P52XX_DIRS := audio camerawrapper consumerir liblights power
+COMMON_P52XX_DIRS := audio camerawrapper consumerir liblights power pvrsrvctl
 include $(foreach common_dirs,$(COMMON_P52XX_DIRS),device/samsung/p5200/$(common_dirs)/Android.mk)
 
 endif
