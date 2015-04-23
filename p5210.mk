@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.santos10.usb.rc:root/init.santos10wifi.usb.rc \
     $(COMMON_PATH)/rootdir/init.santos10.rc:root/init.santos10wifi.rc \
     $(COMMON_PATH)/rootdir/ueventd.santos10.rc:root/ueventd.santos10wifi.rc \
-    $(COMMON_PATH)/rootdir/fstab.santos10:root/fstab.santos10wifi
+    $(COMMON_PATH)/rootdir/fstab.santos10:root/fstab.santos10
 
 # Audio
 PRODUCT_COPY_FILES += \
