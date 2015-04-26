@@ -23,10 +23,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/init.santos10.usb.rc:root/init.santos10wifi.usb.rc \
     $(COMMON_PATH)/rootdir/init.santos10.rc:root/init.santos10wifi.rc \
-    $(COMMON_PATH)/rootdir/ueventd.santos10.rc:root/ueventd.santos10wifi.rc \
-    $(COMMON_PATH)/rootdir/fstab.santos10:root/fstab.santos10
+    $(COMMON_PATH)/rootdir/ueventd.santos10.rc:root/ueventd.santos10wifi.rc
 
 # Audio
 PRODUCT_COPY_FILES += \
