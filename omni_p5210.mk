@@ -14,24 +14,23 @@
 # limitations under the License.
 #
 
-# Release name
-PRODUCT_RELEASE_NAME := p5210
+# Inherit common Omni configurations
+$(call inherit-product, vendor/omni/config/common_tablet.mk)
 
-# Boot animation
-# TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_HEIGHT := 480
-TARGET_SCREEN_WIDTH := 1280
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/p5210/full_p5210.mk)
+$(call inherit-product, device/samsung/p5210/device.mk)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_p5210
+# Device identifier. This must come after all inclusions
+PRODUCT_MODEL := GT-P5210
+PRODUCT_BRAND := samsung
+PRODUCT_NAME := omni_p5210
+PRODUCT_DEVICE := p5210
+PRODUCT_MANUFACTURER := samsung
 
-#Set build fingerprint / ID / Prduct Name ect.
+# Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=santos10wifixx \
     TARGET_DEVICE=santos10wifi \

@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_p5210.mk
+    $(LOCAL_DIR)/omni_p5210.mk
